@@ -44,9 +44,7 @@
         During March of 2024, I participated in an school hackathon with some
         friends. We had decided towards doing a dungeon crawler with random
         generation, in order to give high replayability. We intended to add
-        various enemies, items and npcs. In order to fit the summer theme,
-        we intended to have multiple dungeons, each in a island or "rest area"
-        of sorts.
+        various enemies, items and npcs. 
       </p>
       <p class="section-body">
         The main goal of the hackathon was in order to get procedural generation
@@ -54,7 +52,7 @@
         Due to previous experience in Godot, we decided to use it to code.
       </p>
       <br />
-      <img src="./28percent-example-assets/hackat.png" width="892" height="300" />
+      <img src="./28percent-example-assets/hackat.png" width="720" height="540" />
     </div>
 
     <div class="three-grid">
@@ -88,10 +86,10 @@
         <div class="section">
           <p class="section-title">Requirements & Needs</p>
           <p class="section-body">
-            The grant required us to build a website that described the purpose
-            of the project, the team, events, and project deliverables. We also
-            needed a way for users to subscribe to the newsletter, find team
-            meeting times and locations, and read current and past newsletters.
+            The hackathon required us to build a game, presenting the options of
+            top down or side scroller. We decided on top down, and got to drafting
+            In order to fit the summer theme, we intended to have multiple 
+            dungeons, each in a island or "rest area" of sorts.
           </p>
         </div>
       </div>
@@ -102,31 +100,36 @@
     <div class="section">
       <p class="section-title">The Initial Design</p>
       <p class="section-body">
-        Our layout designer worked on an initial prototype in Figma - working to
-        design something that would meet three primary needs: sharing current
-        and past newsletters, displaying information about the club, and
-        allowing users to subscribe.
+        We started off with the starter repository, then started off on the
+        procedural generation. We originally got it worked with a map of sorts
+        , but not rooms. Due to time restraints the generation only included
+        one type of room, but that is a work in progress.
       </p>
       <p class="section-body">
-        After going through a couple rounds, she presented this initial design
-        to the rest of the team. There was a lot of positive feedback, as well
-        as some good constructive points.
+        The next step was to add life to the dungeon, with enemies and items.
+        While Eric worked on coding enemies, I created sprites for him and
+        coded the UI.
       </p>
 
       <div class="side-by-side">
         <div class="sbs-container" style="width: 630px; height: 418px">
-          <img src="./28percent-example-assets/initial-website-design.png" />
+          <img src="./28percent-example-assets/dgtest.png" />
         </div>
         <div>
           <p class="sbs-right" style="width: 265px">
-            A lot of the team liked the simplicity of the navigation menu and
-            information architecure, noting it was really easy to find
-            everything and navigate through the website. <br /><br />
-            Team members also liked the use of a grid layout for past
-            newsletters and how simple the subscribe feature was.
+            Unfortuntely, we encountered many obstucles on our journey.
+            The first issue started off as the guide we used was in a
+            different version of godot, which significant changes.
+            Issues persisted, but were eventually solved. The next
+            major issue involved Eric's enemy. The enemy's code did
+            not work on anyone else's computer, even though we used
+            the same version.<br /><br />
+            We decided to upload the work and go home. We had decided
+            to continue our work there. However, Isaac's computer had
+            an issue uploading, but luckily he was able to sort it out.
             <br /><br />
-            But in terms of the color & typography choices, the team was
-            divided.
+            Thankfully, at our houses the coding went smoothly. We
+            finished the procedural generation, and created a weapon.
           </p>
         </div>
       </div>
@@ -135,26 +138,21 @@
     <div class="three-grid" style="padding-left: 5%">
       <div class="three-grid-sec">
         <div class="section">
-          <img
-            src="./28percent-example-assets/subscriber-list-design.png"
-            style="width: 468px; height: 149px"
-          />
-        </div>
-        <div class="section">
+          <p class="section-title">The UI</p>
           <p class="section-body">
-            The designer explained she was trying to resemble the colors and
-            style of a vintage newspaper. But other members argued that the
-            colors should be more aligned with the newsletter brand colors -
-            purples, blues, and greens. In a survey that our head of outreach
-            posted on Instagram, the majority agreed to make the switch to a
-            cooler color palette.
+            While creating the UI, we had to think of what to put on it.
+            We decided on having the stats of health, stamina, and mana.
+            Health would be used to take damage, stamina for sprinting, and
+            mana for spells. I created multiple iterations, before settling
+            on three final designs (seen in the picture). Here we chose the
+            one best suited towards the style of the dungeon.
           </p>
         </div>
       </div>
       <div class="three-grid-sec">
         <div class="section">
           <img
-            src="./28percent-example-assets/past-newsletters-design.png"
+            src="./28percent-example-assets/uialt.png"
             style="width: 455px; height: 343px"
           />
         </div>
