@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" type="text/css" href="28percent-example.css" />
+</head>
+<html>
+  <div class="PH" style="background-color: #a38245">
+    <div class="nav-bar">
+
+        <div class="nav-link">
+          <a href="/index.html"><p>home</p></a>
+        </div>
+          
+          <div class="nav-link dropdown">
+            <a href="#""><p>projects</a>
+            <div class="dropdown-content">
+              <a href="/pages/28-percent-example-page/dungeoncrawl.html">Dungeon Crawler</a>
+              <a href="/pages/28-percent-example-page/zhongguo.html">Xi Xing Ping Fighting Game</a>
+            </div>
+        
+        </div>
+          
+        <div class = "nav-link">
+          <a href="../index.html"><p>resume</p></a> </div>
+        </div>
+
+    <div class="PH-content">
+      <p class="PH-title">Dungeon Crawler</p>
+      <p class="PH-desc">
+        A basic dungeon crawler game with procedural generation. Enemies are not yet implemented, as it is a work in progress. Originally built for a hackathon. Built using the Godot Engine in GDScript.
+      </p>
+    </div>
+  </div>
+
+  <div class="page-body">
+    <div class="section">
+      <p class="section-title">Background</p>
+      <p class="section-body">
+        During March of 2024, I participated in an school hackathon with some
+        friends. We had decided towards doing a dungeon crawler with random
+        generation, in order to give high replayability. We intended to add
+        various enemies, items and npcs. 
+      </p>
+      <p class="section-body">
+        The main goal of the hackathon was in order to get procedural generation
+        working. We were given a basic item and player, so we built off that.
+        Due to previous experience in Godot, we decided to use it to code.
+      </p>
+      <br />
+      <img src="./28percent-example-assets/hackat.png" width="720" height="540" />
+    </div>
+
+    <div class="three-grid">
+      <div class="three-grid-sec">
+        <div class="section">
+          <p class="section-title">The Team</p>
+          <p class="section-body" style="width: 355px">
+            It started off with Isaac Zhang and I working together. Later on 
+            Ellis Park joined us with much larger ambitions, which led to the
+            addition of Eric Homer. Isaac had been assigned towards coding
+            the procedural generation. Ellis had been assigned to creating
+            tiles for the dungeons. Eric was assigned to working on music
+            and enemies.
+          </p>
+        </div>
+        <img src="./28percent-example-assets/finalspritehseeet.png" width="300" height="300" />
+        <div class="section"><br /><br /><br /><br /><br /><br /><br /></div>
+      </div>
+      <div class="three-grid-sec">
+        <div class="section">
+          <p class="section-title">My Role</p>
+          <p class="section-body">
+            I was sent to be the primary sprite artist, and create items.
+            I created the basic character and spritesheet, with over 40
+            animation sprites. I then created the alternative character,
+            and made multiple enemy sprites. Lastly I worked on the UI
+            and items.
+          </p>
+        </div>
+
+        <div class="section">
+          <p class="section-title">Requirements & Needs</p>
+          <p class="section-body">
+            The hackathon required us to build a game, presenting the options of
+            top down or side scroller. We decided on top down, and got to drafting
+            In order to fit the summer theme, we intended to have multiple 
+            dungeons, each in a island or "rest area" of sorts.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <div class="section">
+      <p class="section-title">The Initial Design</p>
+      <p class="section-body">
+        We started off with the starter repository, then started off on the
+        procedural generation. We originally got it worked with a map of sorts
+        , but not rooms. Due to time restraints the generation only included
+        one type of room, but that is a work in progress.
+      </p>
+      <p class="section-body">
+        The next step was to add life to the dungeon, with enemies and items.
+        While Eric worked on coding enemies, I created sprites for him and
+        coded the UI.
+      </p>
+
+      <div class="side-by-side">
+        <div class="sbs-container" style="width: 630px; height: 418px">
+          <img src="./28percent-example-assets/dgtest.png" />
+        </div>
+        <div>
+          <p class="sbs-right" style="width: 265px">
+            Unfortuntely, we encountered many obstucles on our journey.
+            The first issue started off as the guide we used was in a
+            different version of godot, which significant changes.
+            Issues persisted, but were eventually solved. The next
+            major issue involved Eric's enemy. The enemy's code did
+            not work on anyone else's computer, even though we used
+            the same version.<br /><br />
+            We decided to upload the work and go home. We had decided
+            to continue our work there. However, Isaac's computer had
+            an issue uploading, but luckily he was able to sort it out.
+            <br /><br />
+            Thankfully, at our houses the coding went smoothly. We
+            finished the procedural generation, and created a weapon.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="three-grid" style="padding-left: 5%">
+      <div class="three-grid-sec">
+        <div class="section">
+          <p class="section-title">The UI</p>
+          <p class="section-body">
+            While creating the UI, we had to think of what to put on it.
+            We decided on having the stats of health, stamina, and mana.
+            Health would be used to take damage, stamina for sprinting, and
+            mana for spells. I created multiple iterations, before settling
+            on three final designs (seen in the picture). Here we chose the
+            one best suited towards the style of the dungeon.
+          </p>
+        </div>
+      </div>
+      <div class="three-grid-sec">
+        <div class="section">
+          <img
+            src="./28percent-example-assets/uialt.png"
+            style="width: 455px; height: 343px"
+          />
+        </div>
+
+        <div class="section"></div>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <div class="section">
+      <p class="section-body">
+        <br />
+        <br />
+      </p>
+      <br />
+      <p class="section-body">
+        Take a look at the github repository <a href="https://github.com/IsackZ/Adventure-Hackathon-">here.</a>
+      </p>
+      <br />
+    </div>
+
+   
+  </div>
+  <br />
+  <br />
+  <div
+    style="
+      height: 30px;
+      width: 100%;
+      margin: 0;
+      flex-shrink: 0;
+      background-color: #a38245;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    "
+  ></div>
+</html>
