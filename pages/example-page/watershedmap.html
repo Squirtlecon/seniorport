@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" type="text/css" href="28percent-example.css" />
+</head>
+<html>
+  <div class="PH" style="background-color: #a38245">
+    <div class="nav-bar">
+
+        <div class="nav-link">
+          <a href="/index.html"><p>home</p></a>
+        </div>
+          
+          <div class="nav-link dropdown">
+            <a href="#""><p>projects</a>
+            <div class="dropdown-content">
+              <a href="/pages/example-page/dungeoncrawl.html">Dungeon Crawler</a>
+              <a href="/pages/example-page/zhongguo.html">Xi Xing Ping Fighting Game</a>
+              <a href="/pages/example-page/watershedmap.html">Minecraft Watershed Map</a>
+            </div>
+        
+        </div>
+          
+        <div class = "nav-link">
+          <a href="../index.html"><p>resume</p></a> </div>
+        </div>
+
+    <div class="PH-content">
+      <p class="PH-title">Minecraft Watershed Map</p>
+      <p class="PH-desc">
+        I created a basic watershed map showing where basins and streams would form, off of my Minecraft world with friends. Made using ArcGis
+      </p>
+    </div>
+  </div>
+
+  <div class="page-body">
+    <div class="section">
+      <p class="section-title">Introduction</p>
+      <p class="section-body">
+        One day, I was running my creeper farm while scrolling instagram reels
+        During this time, I saw a reel on the puddles and floods mod on Minecraft.
+        This made me curious as to how this would work on me and my friends world.
+        However, as we were using a Hypixel SMP we couldn't use mods, so I decided to
+        try and make a watershed map, as it would present a good opportunity to learn 
+        important software.
+      </p>
+      <p class="section-body">
+        My main goal during this project was to learn ArcGis, and make a watershed map.
+        While it is not the most accurate or good map due to the size of the section of
+        the world, and the Minecraft terrain generation not being the most accurate, it
+        was still interesting to do.
+      </p>
+      <br />
+      <img src="./28percent-example-assets/world1.png" width="785" height="499" />
+    </div>
+
+    <div class="three-grid">
+      <div class="three-grid-sec">
+        <div class="section">
+          <p class="section-title">Starting</p>
+          <p class="section-body" style="width: 355px">
+            To start off, I had to find a way to convert my Minecraft world 
+            into a DEM. I first had to download the Minecraft world by copy 
+            and pasting the schematic from the server into a private world.
+            Then, turning it into a DEM started. I attempted to use worldpainter
+            to do so, however it removed all of the buildings, blockiness 
+            and features. This led me to turning the world into a 3d model, which
+            I could turn into a multipatch. I had to remove some things in the model,
+            such as water, grass, flowers, and most transparent blocks. This was so 
+            it did not change the flow, as water flowing into them destorys them ingame.
+            However the program would treat them as a rigid bodies blocking water.
+            Bellow is the model, with just the water removed. I used OBJ format.
+            
+          </p>
+        </div>
+        <img src="./28percent-example-assets/3dmodel.png" width="355" height="240" />
+        <div class="section"><br /><br /><br /><br /><br /><br /><br /></div>
+      </div>
+      <div class="three-grid-sec">
+        <div class="section">
+          <p class="section-title">Converting to a DEM</p>
+          <p class="section-body">
+            I started off by using the import 3d function on ArcGis Pro.
+            This converted the 3d model into a Multipatch feature class.
+            I then turned it into a raster, using the multipatch to raster
+            feature. This turned it into a usable DEM. I set the cell size
+            to 1 to emulate the 1 meter per block in Minecraft. I just 
+            used the default coordinates it gave. Lastly, I used the fill
+            function in order to minor dips. I opted not to include different
+            permeabilities, due to the sheer number of different blocks that
+            were in the world.
+          </p>
+        </div>
+
+        <div class="section">
+          <p class="section-title">Initial Calculations</p>
+          <p class="section-body">
+            I did not have to do many calculations myself, as the program did them.
+            The first I had it do was run the flow direction. After, I put the flow
+            direction into the basin funcion in order to see where water would build
+            up. I set this as a yellow to orange gradient. I then used a conditional
+            flow accumulation to set up the streams.
+          </p>
+        </div>
+        <img src="./28percent-example-assets/basin.png" width="355" height="240" />
+      </div>
+    </div>
+
+    <br /><br />
+
+    <div class="section">
+      <p class="section-title">Making it look good</p>
+      <p class="section-body">
+        one type of room, but that is a work in progress.
+        To make it look good, I created a hillshade layer
+        using the premade function once again. I opted.
+        Along with this I created a layer for the preexisitng
+        water. I did this by doing the same process as before,
+        except with a 3d model of only the top water layers only.
+      </p>
+      </p>
+
+      <div class="side-by-side">
+        <div class="sbs-container" style="width: 710px; height: 480px">
+          <img src="./28percent-example-assets/map.png" />
+        </div>
+        <div>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="three-grid" style="padding-left: 5%">
+      <div class="three-grid-sec">
+        <div class="section">
+          <p class="section-title">The UI</p>
+          <p class="section-body">
+            While creating the UI, we had to think of what to put on it.
+            We decided on having the stats of health, stamina, and mana.
+            Health would be used to take damage, stamina for sprinting, and
+            mana for spells. I created multiple iterations, before settling
+            on three final designs (seen in the picture). Here we chose the
+            one best suited towards the style of the dungeon.
+          </p>
+        </div>
+      </div>
+      <div class="three-grid-sec">
+        <div class="section">
+          <img
+            src="./28percent-example-assets/uialt.png"
+            style="width: 455px; height: 343px"
+          />
+        </div>
+
+        <div class="section"></div>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <div class="section">
+      <p class="section-body">
+        <br />
+        <br />
+      </p>
+      <br />
+      <p class="section-body">
+        Take a look at the github repository <a href="https://github.com/IsackZ/Adventure-Hackathon-">here.</a>
+      </p>
+      <br />
+    </div>
+
+   
+  </div>
+  <br />
+  <br />
+  <div
+    style="
+      height: 30px;
+      width: 100%;
+      margin: 0;
+      flex-shrink: 0;
+      background-color: #a38245;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    "
+  ></div>
+</html>
